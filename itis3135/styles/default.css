@@ -1,0 +1,38 @@
+body {
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif, arial;
+    color: darkblue
+}
+
+a {
+    color: darkcyan
+    text-decoration none;
+}
+
+a:hover {
+    color: firebrick
+    text-decoration line;
+}
+
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2 {
+    text-align: center;
+    color: darkblue
+}
+
+img {
+    width: 70%;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+    color: gray
+}
