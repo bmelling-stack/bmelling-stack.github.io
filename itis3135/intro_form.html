@@ -19,35 +19,46 @@
     }
 
     form.intro-form label {
-      display: block; margin-top: .5rem;
+      display: block; 
+      margin-top: .5rem;
     }
 
     form.intro-form input, form.intro-form textarea {
-      width: 100%; padding: .5rem; margin-top: .25rem;
+      width: 100%;
+      margin-top: .25rem;
     }
 
     .row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: .75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
 
     }
 
     .buttons {
-      margin-top: 1rem; display: flex; gap: .5rem; flex-wrap: wrap;
+      margin-top: 1rem;
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
     }
 
     .courses {
-      margin-top: .5rem; display: grid; gap: .5rem;
+      margin-top: .5rem;
+      display: grid;
+      gap: .5rem;
     }
 
     .course-row {
-      display: grid; grid-template-columns: 1.1fr .9fr 1.5fr 1.5fr auto; gap: .5rem;
+      display: grid; 
+      grid-template-columns: 1.1fr .9fr 1.5fr 1.5fr auto;
+      gap: .5rem;
     }
 
     .course-row button {
       padding: .4rem .6rem;
     }
 
-    small.req {
+    .req {
       color: #667;
     }
 
@@ -87,7 +98,7 @@
 
       <div class="row">
         <label>Acknowledgement Date
-          <input type="date" id="ackDate">
+          <input type="date" id="ackDate" placeholder="YYYY-MM-DD">
         </label>
         <label>Divider (like ~, |, etc)
           <input type="text" id="divider" placeholder="~ |" value="~">
