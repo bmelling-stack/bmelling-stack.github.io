@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <title>Brian Mellinger Benevolent Moose | ITIS3135 Introduction Form</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="scripts/introduction.js" defer></script>
+
+  <style>
+    form.intro-form {
+      max-width: 850px;
+      margin: 1rem auto;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    form.intro-form label {
+      display: block; margin-top: .5rem;
+    }
+
+    form.intro-form input, form.intro-form textarea {
+      width: 100%; padding: .5rem; margin-top: .25rem;
+    }
+
+    .row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .75rem;
+
+    }
+
+    .buttons {
+      margin-top: 1rem; display: flex; gap: .5rem; flex-wrap: wrap;
+    }
+
+    .courses {
+      margin-top: .5rem; display: grid; gap: .5rem;
+    }
+
+    .course-row {
+      display: grid; grid-template-columns: 1.1fr .9fr 1.5fr 1.5fr auto; gap: .5rem;
+    }
+
+    .course-row button {
+      padding: .4rem .6rem;
+    }
+
+    small.req {
+      color: #667;
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+    <div data-include="components/separateheader.html"></div>
+  </header>
+
+  <main id="main">
+    <h2>Introduction Form</h2>
+
+    <h3>Please submit the form below.</h3>
+
+    <form id="introForm" class="intro-form" novalidate>
+      <div class="row">
+        <label>First Name* 
+          <input type="text" id="firstName" required placeholder="First name" value="Brian">
+        </label>
+        <label>Middle Name (optional)
+          <input type="text" id="middleName" placeholder="Middle name or initial">
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Last Name*
+          <input type="text" id="lastName" required placeholder="Last name" value="Mellinger">
+        </label>
+      </div>
+
+      <label>Acknowledgment Statement*
+        <input type="text" id="ack" required placeholder="Type your acknowledgement" value="I acknowledge this is my work.">
+      </label>
+
+      <div class="row">
+        <label>Acknowledgement Date
+          <input type="date" id="ackDate">
+        </label>
+        <label>Divider (like ~, |, etc)
+          <input type="text" id="divider" placeholder="~ |" value="~">
+        </label>
+      </div>
+
+      <div class="row">
+        <label>Mascot Adjective*
+          <input type="text" id="mascotAdj" required placeholder="Adjective" value="Benevolent">
+        </label>
+        <label>Mascot Animal*
+          <input type="text" id="mascotAnimal" required placeholder="Animal" value="Moose">
+        </label>
+      </div>
+
+      <label>Picture
+        <input type="file" id="introImage" accept="image/*">
+      </label>
+      <button type="button" onclick="loadImage()">Preview Image</button>
+      <div id="loadImage"></div>
+
+      <label>Picture Caption
+        <input type="text" id="caption" placeholder="Caption under picture" value="Photo of Brian with Buffy">
+      </label>
+
+      <label>Personal Background: 
+        <input id="b1" value="I am a native North Carolina resident that now lives in Charlotte! I have also lived briefly in Arizona. I am in Charlotte so that I can study to become a Computer Scientist at the University of North Carolina at Charlotte.">
+      </label>
+      <label>Professional Background: 
+        <input id="b2" value="Before going to college, I enlisted in the North Carolina Army National Guard as an Intelligence Analyst. I frequently enjoy learning about security and I also enjoy helping others.">
+      </label>
+      <label>Academic Background: 
+        <input id="b3" value="I am now a junior in Computer Science and I am in the cybersecurity concentration.">
+      </label>
+      <label>Background in this Subject: 
+        <input id="b4" value="I have very little background in web development but I am excited to learn.">
+      </label>
+      <label>Primary Computer Platform:
+        <input id="b5" value="Asus, Microsoft Windows 11, I primarily work at home">
+      </label>
+
+      <h4>Courses I’m Taking & Why</h4>
+      <div id="courses" class="courses">
+        <div class="course-row">
+          <input type="text" placeholder="Dept (e.g., ITSC)" value="MSCI">
+          <input type="text" placeholder="Number" value="3101/3101L">
+          <input type="text" placeholder="Course name" value="Adaptive Team Leadership/Lab">
+          <input type="text" placeholder="Reason" value="This is Army ROTC, I am taking this course in hopes to become an Army Reserve Cybersecurity Officer. I also love the physical and mental challenge and want to progress my current professional career.">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course-row">
+          <input type="text" placeholder="Dept" value="ITSC">
+          <input type="text" placeholder="Number" value="2600">
+          <input type="text" placeholder="Course name" value="Computer Science, Program, Identity, Career">
+          <input type="text" placeholder="Reason" value="Required to take this as it is my first semester at UNCC.">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course-row">
+          <input type="text" placeholder="Dept" value="ITIS">
+          <input type="text" placeholder="Number" value="3135">
+          <input type="text" placeholder="Course name" value="Front-End Web Application Development">
+          <input type="text" placeholder="Reason" value="Required to take this, however, I am excited to take my first course that is front end oriented.">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course-row">
+          <input type="text" placeholder="Dept" value="ITSC">
+          <input type="text" placeholder="Number" value="3146">
+          <input type="text" placeholder="Course name" value="Introduction to Operating Systems & Networks">
+          <input type="text" placeholder="Reason" value="Introduction to Operating Systems & Networks: Required to take this course.">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+
+        <div class="course-row">
+          <input type="text" placeholder="Dept" value="ITSC">
+          <input type="text" placeholder="Number" value="2175">
+          <input type="text" placeholder="Course name" value="Logic and Algorithms">
+          <input type="text" placeholder="Reason" value="Required to take this course.">
+          <button type="button" class="deleteCourse">Delete</button>
+        </div>
+      </div>
+      <button type="button" id="addCourse">Add Course</button>
+
+      <label>Funny thing to Remember you by
+        <input type="text" id="funny" placeholder="Funny/Interesting Item to Remember me by" value="I originally did not like cats, however, I used to watch a kitten run away from freshman girls at North Carolina State University near their dorms almost everyday. One day it walked up to me and let me hold her. I failed to relocate her to a new home and she's been with me for two years now.">
+      </label>
+    
+      <h4>Links (5)</h4>
+      <div class="row">
+        <input type="url" id="link1" placeholder="LinkedIn link">
+        <input type="url" id="link2" placeholder="GitHub link">
+      </div>
+      <div class="row">
+        <input type="url" id="link3" placeholder="Personal website">
+        <input type="url" id="link4" placeholder="Favorite website">
+      </div>
+      <input type="url" id="link5" placeholder="Another link">
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearBtn">Clear</button>
+        <small class="req">* Required fields</small>
+      </div>
+    </form>
+
+    <div id="result"></div>
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
