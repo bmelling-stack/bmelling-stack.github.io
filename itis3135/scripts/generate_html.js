@@ -4,6 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.addEventListener("click", function () {
 
+      function escapeHtml(s) {
+    var str = String(s);
+    str = str.replace(/&/g, "&amp;");
+    str = str.replace(/</g, "&lt;");
+    str = str.replace(/>/g, "&gt;");
+    return str;
+  }
+
+  function escapeAttr(s) {
+    var str = String(s);
+    str = str.replace(/&/g, "&amp;");
+    str = str.replace(/"/g, "&quot;");
+    str = str.replace(/</g, "&lt;");
+    str = str.replace(/>/g, "&gt;");
+    return str;
+  }
+
     var firstName = document.getElementById("firstName").value;
     var middleName = document.getElementById("middleName").value;
     var lastName = document.getElementById("lastName").value;
@@ -116,21 +133,4 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.reload();
     });
   });
-
-  function escapeHtml(s) {
-    var str = String(s);
-    str = str.replace(/&/g, "&amp;");
-    str = str.replace(/</g, "&lt;");
-    str = str.replace(/>/g, "&gt;");
-    return str;
-  }
-
-  function escapeAttr(s) {
-    var str = String(s);
-    str = str.replace(/&/g, "&amp;");
-    str = str.replace(/"/g, "&quot;");
-    str = str.replace(/</g, "&lt;");
-    str = str.replace(/>/g, "&gt;");
-    return str;
-  }
 });
