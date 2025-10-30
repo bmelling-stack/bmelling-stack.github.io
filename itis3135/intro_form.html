@@ -7,6 +7,12 @@
   <title>Brian Mellinger Benevolent Moose | ITIS3135 Introduction Form</title>
   <link rel="stylesheet" href="styles/default.css">
   <script src="scripts/introduction.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="scripts/generate_json.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="scripts/generate_html.js" defer></script>
 
   <style>
     form.intro-form {
@@ -203,8 +209,11 @@
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" id="clearBtn">Clear</button>
-        <small class="req">* Required fields</small>
-      </div>
+        <button type="button" id="generateJsonButton">Generate JSON</button>
+        <button type="button" id="generateHtmlButton">Generate HTML</button>
+       <small class="req">* Required fields</small>
+  </div>
+
     </form>
 
     <div id="result"></div>
