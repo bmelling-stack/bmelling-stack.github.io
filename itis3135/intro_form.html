@@ -21,7 +21,7 @@
       padding: 1rem;
       border: 1px solid #ccc;
       border-radius: 8px;
-      background: #fafafa;
+      background: #eee;
     }
 
     form.intro-form label {
@@ -66,6 +66,45 @@
 
     .req {
       color: #667;
+    }
+
+    :root {
+      --intro-image-width: 300px;
+  }
+
+    .intro-photo {
+      width: var(--intro-image-width);
+      height: auto;
+      display: block;
+  }
+
+    button, .buttons button {
+      appearance: button;
+      -webkit-appearance: button;
+      border: 1px solid #888;
+      background: #eee;
+      padding: .5rem .9rem;
+      border-radius: 8px;
+      font: inherit;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    button:hover { 
+      background: #eee;
+    }
+
+    button:active { 
+      background: #ddd;
+    }
+
+    button:focus-visible {
+      outline: 2px solid #0a66c2;
+      outline-offset: 2px;
+    }
+
+    button[type="reset"] { 
+      background: #eee; 
     }
 
   </style>
@@ -207,7 +246,7 @@
 
       <div class="buttons">
         <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+        <button type="reset" class="btn">Reset Form</button>
         <button type="button" id="clearBtn">Clear</button>
         <button type="button" id="generateJsonButton">Generate JSON</button>
         <button type="button" id="generateHtmlButton">Generate HTML</button>

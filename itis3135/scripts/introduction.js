@@ -1,12 +1,18 @@
 function loadImage() {
-  var image = document.getElementById("introImage").files[0];
-  if (!image) {
-    document.getElementById("loadImage").innerHTML = "";
-    return;
+  const file = document.getElementById("introImage").files[0];
+  const container = document.getElementById("loadImage");
+  container.innerHTML = "";
+
+  const img = document.createElement("img");
+  img.className = "intro-photo";
+  img.alt = "Introduction photo";
+
+  if (file) {
+    img.src = URL.createObjectURL(file);
+  } else {
+    img.src = "images/brian-and-buffy-low-quality.png";
   }
-  var imageUrl = URL.createObjectURL(image);
-  var text = "<img src=\"" + imageUrl + "\" alt=\"preview\" style=\"max-width:100%;height:auto;\" />";
-  document.getElementById("loadImage").innerHTML = text;
+  container.appendChild(img);
 }
 
 var form = document.getElementById("introForm");
@@ -104,7 +110,7 @@ form.addEventListener("submit", function (e) {
 
   var main = document.getElementById("main");
   main.innerHTML = ""
-    + "<h2>Introduction Form</h2>" + "<h2>" + first + " " + last + ": Introduction</h2>" + "<figure>" + "<img src=\"" + imgSrc + "\" alt=\"" + first + " " + last + "\">"
+    + "<h2>Introduction Form</h2>" + "<h2>" + first + " " + last + ": Introduction</h2>" + "<figure>" + "<img class=\"intro-photo\" src=\"" + imgSrc + "\" alt=\"" + first + " " + last + "\">"
     + "<figcaption>" + caption + "</figcaption>" +"</figure>" + "<ul>" + ulHTML +"</ul>" + "<p><a href=\"#\" id=\"startOver\">Reset to Form</a></p>";
 
   document.getElementById("startOver").addEventListener("click", function (evt) {
