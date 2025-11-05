@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  var button = document.getElementById("genHtmlBtn");
+  var button = document.getElementById("generateHtmlButton");
 
   button.addEventListener("click", function () {
 
