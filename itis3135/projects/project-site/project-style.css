@@ -28,7 +28,7 @@ body {
     padding:1px;
 }
 
-header.site-header {
+.site-header {
   background:#f1f5f9;
   border-bottom:1px solid #e5e7eb;
 }
@@ -60,7 +60,7 @@ nav a:hover {
     background:#ebe5ea;
 }
 
-nav a.active {
+.active {
     background:var(--blue);
     color:white;
 }
@@ -88,18 +88,16 @@ section {
     margin: 2rem 0;
 }
 
-h1,h2 {
-    line-height: 1.2;
-}
-
 h1 {
     font-size: 2rem;
     margin: 1.25rem 0 1rem;
+    line-height: 1.2;
 }
 
 h2 {
     font-size: 1.25rem;
     margin: 3 0 .5rem;
+    line-height: 1.2;
 }
 
 @media (min-width:720px) {
@@ -109,7 +107,7 @@ h2 {
   }
 }
 
-footer.site-footer {
+.site-footer {
   border-top:1px solid #e5e7eb;
   background:#f9fafb;
   color:var(--muted);
