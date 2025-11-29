@@ -131,3 +131,23 @@ figcaption {
     color:var(--muted);
     margin-top:.25rem
 }
+
+.pdf-container{
+    margin: 1.5rem 0;
+    width: 100%;
+    border-radius: .75rem;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.pdf-note {
+  text-align: center;
+}
