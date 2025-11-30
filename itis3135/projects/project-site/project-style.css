@@ -167,9 +167,16 @@ hr {
   text-align: center;
 }
 
-.nightphoto {
-  margin: 2rem 0;
-  text-align: center;
+.nightphoto img {
+  width: 500px;
   height: auto;
-  width: auto
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 3);
+  display: block;
+  margin: 0 auto;
+}
+
+.nightphoto {
+  margin-top: 20px;
+  text-align: center;
 }
