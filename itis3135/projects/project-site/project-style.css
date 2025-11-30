@@ -73,6 +73,7 @@ main{
   background: var(--card);
   padding: 1.25rem;
   border-radius: 1rem;
+  border-color:#111;
   display: grid;
   gap: 5rem;
 }
@@ -137,7 +138,6 @@ figcaption {
     width: 100%;
     border-radius: .75rem;
     overflow: hidden;
-    border: 1px solid #e5e7eb;
     background: #ffffff;
 }
 
@@ -150,4 +150,26 @@ iframe {
 
 .pdf-note {
   text-align: center;
+}
+
+.award {
+  text-align: center;
+}
+
+hr {
+  border: none; 
+  height: 1px; 
+  background-color: 
+  black;
+}
+
+.about {
+  text-align: center;
+}
+
+.nightphoto {
+  margin: 2rem 0;
+  text-align: center;
+  height: auto;
+  width: auto
 }

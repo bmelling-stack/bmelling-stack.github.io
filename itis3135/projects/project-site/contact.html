@@ -25,13 +25,70 @@
       </div>
     </header>
 
-    <main class="main-container">
-        <h1>Contact me!</h1>
-        <p>If you would like to contact me, listed is my school email!</p>
-        <p>contact info will be listed soon!</p>
+<main class="main-container">
+  <h1>Contact</h1>
 
-        <p>Here is a form you can submit to me if you would like more information! (official transcripts, etc).</p>
-    </main>
+  <hr>
+  
+  <p>
+    If you would like to get in touch about my research, collaborations, or general questions please use the form below.
+  </p>
+
+  <section class="contact-section">
+    <div class="contact-grid">
+      <form id="contact-form" novalidate>
+
+        <div class="field">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <p class="field-error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <p class="field-error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="topic">What can I help you with?</label>
+          <select id="topic" name="topic">
+            <option value="">Select one...</option>
+            <option value="collaboration">Research collaboration</option>
+            <option value="research">General research questions</option>
+            <option value="media">Media / speaking request</option>
+            <option value="other">Something else</option>
+          </select>
+          <p id="topic-help" class="topic-help" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="5" maxlength="1000" required></textarea>
+          <div id="message-counter" class="char-counter">0 / 500 characters</div>
+          <p class="field-error" id="message-error" aria-live="polite"></p>
+        </div>
+
+        <div class="contact-actions">
+          <button type="submit" class="btn-primary">Send message</button>
+          <p class="contact-note">All fields marked with * are required.</p>
+        </div>
+
+        <div id="form-status" class="form-status" aria-live="polite"></div>
+      </form>
+
+      <aside class="contact-aside">
+        <h2>For the fastest response</h2>
+        <p>You can reach me at my university email: <a href="mailto:klovill@uark.edu">klovill@uark.edu</a></p>
+        <p>
+          Response times may vary depending on the nature of your inquiry and when I have the time to respond.
+        </p>
+      </aside>
+
+    </div>
+  </section>
+</main>
+
 
     <footer class="site-footer">
       <div class="main-container">
